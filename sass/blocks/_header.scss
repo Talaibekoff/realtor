@@ -1,0 +1,97 @@
+.header {
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+    &__text {
+      margin-left: 20px;
+
+      @include bold;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+  }
+  &-info {
+    font-size: 15px;
+    &__icon {
+      color: $main-color;
+    }
+    &__address {
+      margin-left: 10px;
+      border-bottom: 1px solid $black;
+
+      text-decoration: none;
+      transition: all .1s;
+      &:hover {
+        color: $main-color;
+      }
+    }
+    &__phone {
+      margin-left: 30px;
+
+      @include bold;
+      color: $black;
+      text-decoration: none;
+      transition: all .1s;
+      &:hover {
+        color: $main-color;
+      }
+    }
+    &__btn {
+      margin-left: 30px;
+      padding: 15px 26px;
+
+      border-radius: 5px;
+
+      background-color: $main-color;
+
+      color: $white;
+      text-decoration: none;
+      transition: all .1s;
+      &:hover {
+        background-color: lighten($main-color, 5%);
+      }
+    }
+  }
+  &-bottom{
+    box-shadow: 3px 1px 8px rgba($black, .2);
+  }
+  &-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+  }
+  &-nav {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between;
+    &__link {
+      font-size: 15px;
+      color: $black;
+      text-decoration: none;
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        left: 0;
+        bottom: -1;
+        background-color: $main-color;
+        transition: .4s;
+      }
+      &:hover {
+        color: $main-color;
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
