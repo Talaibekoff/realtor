@@ -1,6 +1,10 @@
 @import 'fonts';
-@import 'interface';
 @import 'colors';
+@import 'interface';
 
 // Блок со стилями для header
-@import 'blocks/header'
+@import 'blocks/header';
+// Блок со стилями для hero
+@import 'blocks/hero';
+// Блок со стилями для features
+@import 'blocks/features';

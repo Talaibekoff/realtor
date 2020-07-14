@@ -1,0 +1,75 @@
+.features__inner {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: -135px;
+}
+.features__item {
+  width: 33.33333%;
+  width: 426px;
+  height: 316px;
+  padding: 54px 35px;
+  position: relative;
+  background-color: $white;
+  overflow: hidden;
+}
+.features__title {
+  font-size: 18px;
+  @include bold;
+}
+.features__text {
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $secondary;
+}
+.features__btn {
+  width: 100%;
+  max-width: 240px;
+  position: absolute;
+  bottom: 45px;
+}
+.features__bg {
+  position: absolute;
+  bottom: 25px;
+  right: -100px;
+  &-second {
+    bottom: 0;
+    right: -50px;
+  }
+}
+.features__link {
+  text-decoration: underline;
+  color: $main-color;
+}
+
+.features__item-active {
+  background-color: $main-color;
+}
+.features__item-title {
+  color: $white;
+}
+.features__item-text {
+  color: lighten($secondary, 40%);
+  font-size: 14px;
+}
+.fa-play-circle {
+  margin-right: 5px;
+  color: lighten($secondary, 45%);
+}
+.features__item-video {
+  display: block;
+  text-decoration: underline;
+  color: inherit;
+  &:visited {
+    color: lighten($secondary, 45%);
+  }
+}
+.features__item-btn {
+  background: $white;
+  color: $black;
+  &:hover {
+    background-color: lighten($secondary, 45%);
+  }
+}

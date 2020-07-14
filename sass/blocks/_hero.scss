@@ -1,0 +1,15 @@
+.hero {
+  height: 540px;
+  background: url('../img/main-bg.png') center no-repeat;
+  background-size: cover;
+  &__title {
+    padding: 167px 0 10px;
+    font-size: 34px;
+    @include bold;
+  }
+  &__subtitle {
+    @include bold;
+    font-size: 23px;
+    color: $main-color;
+  }
+}
