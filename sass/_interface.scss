@@ -37,7 +37,11 @@ img {
   text-decoration: none;
   text-align: center;
   transition: all .2s;
+  cursor: pointer;
   &:hover {
     background-color: lighten($main-color, 5%);
   }
+}
+.section__title {
+  font-size: 30px;
 }

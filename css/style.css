@@ -60,10 +60,15 @@ img {
   text-align: center;
   -webkit-transition: all .2s;
   transition: all .2s;
+  cursor: pointer;
 }
 
 .btn:hover {
   background-color: #017f97;
+}
+
+.section__title {
+  font-size: 30px;
 }
 
 .header-inner {
@@ -302,4 +307,137 @@ img {
 
 .features__item-btn:hover {
   background-color: #dde1e6;
+}
+
+.services__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services__item {
+  width: 60%;
+}
+
+.services__item:nth-child(2) {
+  width: 35%;
+  position: relative;
+}
+
+.services__list {
+  margin-top: 50px;
+  margin-bottom: 55px;
+  padding-left: 25px;
+  list-style-type: disc;
+  font-size: 15px;
+}
+
+.services__list-item {
+  margin: 10px 0;
+}
+
+.services__form {
+  width: 100%;
+  max-width: 720px;
+  padding: 50px;
+  -webkit-box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.services__form-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.services__form-title {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: 'Gotham Pro Bold', sans-serif;
+  font-weight: 700;
+}
+
+.services__form-name {
+  max-width: 160px;
+  padding-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+.services__form-name::-webkit-input-placeholder {
+  font-size: 15px;
+  color: #000000;
+}
+
+.services__form-name:-ms-input-placeholder {
+  font-size: 15px;
+  color: #000000;
+}
+
+.services__form-name::-ms-input-placeholder {
+  font-size: 15px;
+  color: #000000;
+}
+
+.services__form-name::placeholder {
+  font-size: 15px;
+  color: #000000;
+}
+
+.services__form-name:focus {
+  outline: none;
+}
+
+.services__form-btn {
+  width: 100%;
+  max-width: 220px;
+}
+
+.services__form-policy {
+  font-size: 13px;
+}
+
+.policy__link {
+  color: #016a7e;
+}
+
+.services__image {
+  position: relative;
+  z-index: 1;
+}
+
+.services__icon {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 2;
+}
+
+.services__name {
+  display: inline-block;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 19px;
+  font-family: 'Gotham Pro Bold', sans-serif;
+  font-weight: 700;
+}
+
+.services__link {
+  display: block;
+  min-width: 455px;
+  font-size: 13px;
+  line-height: 22px;
+  color: #016a7e;
+}
+
+.fa-external-link-alt {
+  margin-left: 5px;
 }
