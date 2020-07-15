@@ -42,6 +42,11 @@ img {
     background-color: lighten($main-color, 5%);
   }
 }
+.section {
+  padding: 100px 0;
+}
 .section__title {
   font-size: 30px;
+  width: 100%;
+  max-width: 650px;
 }

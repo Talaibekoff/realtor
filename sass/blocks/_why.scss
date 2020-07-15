@@ -1,0 +1,33 @@
+.why {
+  background-color: $section-bg;
+  &__inner {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 20%;
+    max-width: 230px;
+  }
+  &__content {
+    min-height: 160px;
+    position: relative;
+  }
+  &__icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto;
+  }
+  &__text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  &__link {
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+  }
+}
