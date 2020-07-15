@@ -497,3 +497,135 @@ img {
   bottom: 0;
   left: 70px;
 }
+
+.package__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+
+.package__item {
+  width: 33.33333%;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  position: relative;
+}
+
+.package__item:nth-child(2) {
+  z-index: 2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.package__content {
+  padding: 50px 0 50px 40px;
+  min-height: 390px;
+  position: relative;
+}
+
+.package__action {
+  width: 160px;
+  height: 130px;
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  border-radius: 50%;
+  background-color: #bd0000;
+}
+
+.package__action span {
+  position: relative;
+  top: 80px;
+  left: 30px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.package__name {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.package__price {
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #bd0000;
+  font-family: 'Gotham Pro Bold', sans-serif;
+  font-weight: 700;
+}
+
+.package__price span {
+  color: #000000;
+}
+
+.package__sale {
+  font-size: 20px;
+  color: #000000;
+  font-family: 'Gotham Pro Bold', sans-serif;
+  font-weight: 700;
+  position: relative;
+}
+
+.package__sale:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  position: absolute;
+  bottom: 45%;
+  background-color: #000000;
+}
+
+.package__list {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #5e6c80;
+}
+
+.package__link {
+  display: table;
+  margin-bottom: 30px;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.package__info {
+  font-size: 14px;
+}
+
+.package__info-text {
+  display: block;
+  margin-top: 25px;
+  color: #5e6c80;
+}
+
+.package__btn {
+  width: 100%;
+  max-width: 234px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.package__btn-link {
+  background-color: #bd0000;
+}
+
+.package__btn-link:hover {
+  background-color: #d70000;
+}
+
+.package__img {
+  position: absolute;
+  bottom: -2%;
+  right: -12%;
+}
