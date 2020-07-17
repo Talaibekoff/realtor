@@ -1,0 +1,32 @@
+.read-more {
+  transition: all .5s;
+}
+.read-more__inner {
+  margin-top: 50px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  transition: all .5s;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+    transition: all .5s;
+  }
+}
+.read-more__btn, .read-more__inner {
+  display: inline-block;
+  margin-top: 25px;
+  &:hover {
+    height: 250px;
+    transition: all .5s;
+    &::after {
+      background: none;
+      transition: all .5s;
+    }
+  }
+}
