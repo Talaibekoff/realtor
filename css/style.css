@@ -496,6 +496,11 @@ img {
   position: absolute;
   bottom: 0;
   left: 70px;
+  color: #5e6c80;
+}
+
+.why__link:visited {
+  color: #5e6c80;
 }
 
 .package {
@@ -685,7 +690,7 @@ img {
 
 .feedback__btn {
   display: inline-block;
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 25px;
 }
 

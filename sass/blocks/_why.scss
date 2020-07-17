@@ -29,5 +29,9 @@
     position: absolute;
     bottom: 0;
     left: 70px;
+    color: $secondary;
+    &:visited {
+      color: $secondary;
+    }
   }
 }
