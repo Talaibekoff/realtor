@@ -686,6 +686,11 @@ img {
 .feedback__source {
   display: block;
   margin-top: 20px;
+  color: #000000;
+}
+
+.feedback__source:visited {
+  color: #000000;
 }
 
 .feedback__btn {
@@ -704,4 +709,25 @@ img {
   bottom: -120px;
   right: 0;
   max-width: 300px;
+}
+
+.partners {
+  background-color: #f2f2f2;
+}
+
+.partners__inner {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.partners__item {
+  width: 15%;
 }

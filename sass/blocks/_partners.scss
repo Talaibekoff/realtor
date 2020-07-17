@@ -1,0 +1,12 @@
+.partners {
+  background-color: $section-bg;
+}
+.partners__inner {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.partners__item {
+  width: 15%;
+}

@@ -33,6 +33,10 @@
 .feedback__source {
   display: block;
   margin-top: 20px;
+  color: $black;
+  &:visited {
+    color: $black;
+  }
 }
 .feedback__btn {
   display: inline-block;
