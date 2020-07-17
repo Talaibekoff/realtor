@@ -1,0 +1,51 @@
+.feedback__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.feedback__item {
+  width: 30%;
+}
+.feedback__name {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 17px;
+  @include bold;
+}
+.feedback__date {
+  margin-bottom: 20px;
+  display: block;
+  font-size: 14px;
+  color: $main-color;
+}
+.feedback__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: $secondary;
+  font-size: 14px;
+  line-height: 17px;
+  & span {
+    display: block;
+    margin-top: 20px;
+  }
+}
+.feedback__source {
+  display: block;
+  margin-top: 20px;
+}
+.feedback__btn {
+  display: inline-block;
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+.feedback__wrap {
+  position: relative;
+  overflow: hidden;
+}
+.feedback__img {
+  position: absolute;
+  bottom: -120px;
+  right: 0;
+  max-width: 300px;
+}
