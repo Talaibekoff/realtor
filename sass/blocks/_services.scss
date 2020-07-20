@@ -61,6 +61,7 @@
 }
 
 .services__image {
+  width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -78,8 +79,7 @@
   @include bold;
 }
 .services__link {
-  display: block;
-  min-width: 455px;
+  max-width: 455px;
   font-size: 13px;
   line-height: 22px;
   color: $main-color;
