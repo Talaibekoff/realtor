@@ -1,9 +1,9 @@
 .hero {
   height: 540px;
-  background-image: url('../img/main-bg.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-image: url('../img/main-bg.png');
   &__title {
     padding: 167px 0 10px;
     font-size: 34px;
