@@ -72,3 +72,19 @@ h1, h2, h3, h4, h4, h5, h6 {
   }
 }
 
+.arrows {
+  &-prev,
+  &-next {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    &:focus {
+      outline: none;
+      border: none;
+    }
+    &:active {
+      opacity: .5;
+    }
+  }
+}

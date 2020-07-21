@@ -5,7 +5,8 @@
   margin-top: 50px;
 }
 .feedback__item {
-  width: 30%;
+  width: 25%;
+  margin: auto;
 }
 .feedback__name {
   display: block;
@@ -52,4 +53,9 @@
   bottom: -120px;
   right: 0;
   max-width: 300px;
+}
+.feedback__arrows {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
