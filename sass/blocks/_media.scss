@@ -5,11 +5,44 @@
     }
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .header-info {
     & .fas,
     &__address {
     display: none;
     }
   }
+}
+@media (max-width: 992px) {
+  .header-inner {
+    padding: 10px 0;
+  }
+
+  .hero {
+    height: 340px;
+    background-position: 40%;
+    &__title {
+      padding-top: 75px;
+      font-size: 25px;
+    }
+    &__subtitle {
+      font-size: 19px;
+    }
+  }
+
+  .features {
+    max-height: unset;
+    &__inner {
+      display: block;
+    }
+    &__item {
+      width: 100%;
+      max-width: unset;
+      min-height: 270px;
+    }
+    &__title {
+      max-width: unset;
+    }
+  }
+
 }

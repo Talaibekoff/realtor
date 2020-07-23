@@ -262,7 +262,8 @@ h1, h2, h3, h4, h4, h5, h6 {
 
 .features {
   padding: 0;
-  max-height: 180px;
+  position: relative;
+  top: -135px;
 }
 
 .features__inner {
@@ -274,14 +275,12 @@ h1, h2, h3, h4, h4, h5, h6 {
           justify-content: center;
   -webkit-box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
-  position: relative;
-  top: -135px;
 }
 
 .features__item {
   width: 33.33333%;
-  width: 426px;
-  height: 316px;
+  max-width: 426px;
+  min-height: 316px;
   padding: 54px 35px;
   position: relative;
   background-color: #ffffff;
@@ -289,6 +288,7 @@ h1, h2, h3, h4, h4, h5, h6 {
 }
 
 .features__title {
+  max-width: 250px;
   font-size: 18px;
   font-family: 'Gotham Pro Bold', sans-serif;
   font-weight: 700;
@@ -359,6 +359,12 @@ h1, h2, h3, h4, h4, h5, h6 {
 
 .features__item-btn:hover {
   background-color: #dde1e6;
+}
+
+.services {
+  padding-top: 0;
+  position: relative;
+  top: -50px;
 }
 
 .services__inner {
@@ -759,6 +765,22 @@ h1, h2, h3, h4, h4, h5, h6 {
   right: 0;
 }
 
+.feedback__arrows-prev, .feedback__arrows-next {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+}
+
+.feedback__arrows-prev:focus, .feedback__arrows-next:focus {
+  outline: none;
+  border: none;
+}
+
+.feedback__arrows-prev:active, .feedback__arrows-next:active {
+  opacity: .5;
+}
+
 .partners {
   background-color: #f2f2f2;
 }
@@ -961,8 +983,39 @@ h1, h2, h3, h4, h4, h5, h6 {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .header-info .fas, .header-info__address {
     display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-inner {
+    padding: 10px 0;
+  }
+  .hero {
+    height: 340px;
+    background-position: 40%;
+  }
+  .hero__title {
+    padding-top: 75px;
+    font-size: 25px;
+  }
+  .hero__subtitle {
+    font-size: 19px;
+  }
+  .features {
+    max-height: unset;
+  }
+  .features__inner {
+    display: block;
+  }
+  .features__item {
+    width: 100%;
+    max-width: unset;
+    min-height: 270px;
+  }
+  .features__title {
+    max-width: unset;
   }
 }

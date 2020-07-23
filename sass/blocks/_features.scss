@@ -1,24 +1,25 @@
 .features {
   padding: 0;
-  max-height: 180px;
+  position: relative;
+  top: -135px;
 }
 .features__inner {
   display: flex;
   justify-content: center;
   box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
-  position: relative;
-  top: -135px;
+  
 }
 .features__item {
   width: 33.33333%;
-  width: 426px;
-  height: 316px;
+  max-width: 426px;
+  min-height: 316px;
   padding: 54px 35px;
   position: relative;
   background-color: $white;
   overflow: hidden;
 }
 .features__title {
+  max-width: 250px;
   font-size: 18px;
   @include bold;
 }
