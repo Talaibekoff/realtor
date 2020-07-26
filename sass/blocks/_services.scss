@@ -1,5 +1,6 @@
 .services {
   padding-top: 0;
+  padding-bottom: 50px;
   position: relative;
   top: -50px;
 }
@@ -24,9 +25,20 @@
     margin: 10px 0;
   }
 }
+.services__item-btn {
+  display: none;
+  padding: 10px 15px;
+  margin: auto;
+  max-width: 290px;
+  border: 1px solid;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
 .services__form {
   width: 100%;
   max-width: 720px;
+  margin-top: -250px;
   padding: 50px;
   box-shadow: 0 3px 8px 1px rgba($black, 0.2);
   &-block {
@@ -91,4 +103,66 @@
 }
 .fa-external-link-alt {
   margin-left: 5px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .services__form {
+    margin-top: -180px;
+    max-width: 600px;
+    padding: 30px;
+    &-name {
+      max-width: 130px;
+    }
+    &-btn {
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .services__item {
+    width: 50%;
+    &:nth-child(2) {
+      width: 45%;
+    }
+  }
+  .services__form {
+    margin: 30px auto 0;
+    max-width: 720px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .services {
+    padding-bottom: 0;
+  }
+  .services__item {
+    width: 100%;
+    &:nth-child(2) {
+      display: none;
+      width: 60%;
+      margin: auto;
+    }
+    &-btn {
+      display: block;
+    }
+  }
+  .services__form {
+    padding: unset;
+    box-shadow: unset;
+    &-block {
+      flex-wrap: wrap;
+    }
+    &-name {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 20px;
+    }
+    &-btn {
+      margin-top: 25px;
+    }
+  }
 }

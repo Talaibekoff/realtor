@@ -60,15 +60,26 @@ h1, h2, h3, h4, h4, h5, h6 {
     width: 100%;
     max-width: 960px;
   }
+  .section {
+    padding: 50px 0;
+    &__title {
+      font-size: 22px;
+    }
+  }
 }
 @media (max-width: 768px) {
   .container {
-    width: 720px;
+    width: 100%;
+    max-width: 720px;
+  }
+  .section__title {
+    font-size: 18px;
   }
 }
-@media (max-width: 567px) {
+@media (max-width: 576px) {
   .container {
-    width: 540px;
+    width: 100%;
+    max-width: 540px;
   }
 }
 

@@ -83,3 +83,41 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .header {
+    &-wrapper {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-info {
+    & .fas,
+    &__address {
+    display: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header-inner {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .header-info__phone {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-logo__text {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+}
+

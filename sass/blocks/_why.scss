@@ -9,9 +9,6 @@
   }
   &__item {
     width: 20%;
-    max-width: 230px;
-  }
-  &__content {
     min-height: 160px;
     position: relative;
   }
@@ -21,17 +18,23 @@
     margin: 0 auto;
   }
   &__text {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 5px;
     font-size: 15px;
   }
   &__link {
     position: absolute;
+    right: 0;
+    left: 0;
     bottom: 0;
-    left: 70px;
     color: $secondary;
     &:visited {
       color: $secondary;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .why__inner {
+    margin-top: 50px;
   }
 }

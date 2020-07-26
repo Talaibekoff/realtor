@@ -20,8 +20,19 @@
   }
 }
 .footer__address {
-  display: inline-block;
+  display: block;
   margin-top: 85px;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  @include regular;
+  &-link {
+    color: $white;
+  }
+  &-icon {
+    margin-right: 10px;
+    color: $main-color;
+  }
 }
 .footer__nav {
   margin: 0;
@@ -74,16 +85,27 @@
   max-width: 220px;
   margin-top: 25px;
 }
-.footer__address {
-  margin-right: 60px;
-  font-size: 15px;
-  font-style: normal;
-  @include regular;
-  &-link {
-    color: $white;
-  }
-  &-icon {
-    margin-right: 10px;
-    color: $main-color;
+
+
+@media (max-width: 768px) {
+  .footer {
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__item {
+      flex-basis: 100%;
+      text-align: center;
+    }
+    &__block {
+      margin: 30px auto 0;
+      text-align: center;
+    }
+    &__address {
+      margin-top: 60px;
+      &-link {
+        display: block;
+        margin-top: 5px;
+      }
+    }
   }
 }
