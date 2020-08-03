@@ -5,6 +5,54 @@
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  & .slick-prev {
+    position: absolute;
+    top: 40%;
+    left: -15px;
+    z-index: 1;
+    font-size: 0;
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.2);
+    background-color: $white;
+    &:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 35%;
+      left: 40%;
+      border-top: 2px solid #000;
+      border-right: 2px solid #000;
+      transform: rotate(-135deg);
+    }
+  }
+  & .slick-next {
+    position: absolute;
+    top: 40%;
+    right: -15px;
+    z-index: 1;
+    font-size: 0;
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.2);
+    background-color: $white;
+    &:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 35%;
+      left: 35%;
+      border-top: 2px solid #000;
+      border-right: 2px solid #000;
+      transform: rotate(42deg);
+    }
+  }
 }
 .package__item {
   width: 33.33333%;

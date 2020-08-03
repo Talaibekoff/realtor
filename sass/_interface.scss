@@ -11,10 +11,6 @@ h1, h2, h3, h4, h4, h5, h6 {
   margin: 0;
 }
 
-/* img {
-  max-width: 100%;
-} */
-
 .container {
   width: 100%;
   max-width: 1240px;
@@ -97,5 +93,15 @@ h1, h2, h3, h4, h4, h5, h6 {
     &:active {
       opacity: .5;
     }
+  }
+}
+.slick-prev,
+.slick-next {
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transform: scale(0.9);
+    outline: none;
   }
 }
