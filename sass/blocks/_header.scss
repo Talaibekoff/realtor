@@ -10,11 +10,11 @@
     align-items: center;
     &__text {
       margin-left: 20px;
-
       @include bold;
       font-size: 15px;
       text-transform: uppercase;
     }
+    
   }
   &-info {
     font-size: 15px;
@@ -22,17 +22,16 @@
       color: $main-color;
     }
     &__address {
-      margin-left: 10px;
       border-bottom: 1px solid $black;
 
       text-decoration: none;
       transition: all .1s;
-      &:hover {
+      &:visited {
         color: $main-color;
       }
     }
     &__phone {
-      margin-left: 30px;
+      margin-left: 15px;
 
       @include bold;
       color: $black;
@@ -42,8 +41,62 @@
         color: $main-color;
       }
     }
+    &__call {
+      display: none;
+      font-size: 30px;
+      vertical-align: middle;
+      color: $main-color;
+    }
+    &__whatsapp {
+      display: none;
+      font-size: 35px;
+      vertical-align: middle;
+      color: $main-color;
+    }
     &__btn {
-      margin-left: 30px;
+      margin-left: 15px;
+    }
+  }
+  &__burger {
+    display: none;
+    width: 30px;
+    height: 18px;
+    position: relative;
+    vertical-align: middle;
+    &:active,
+    &:focus,
+    &:visited {
+      outline: none;
+      text-decoration: none;
+      color: transparent;
+    }
+    & span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      &::before,
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: inherit;
+      }
+      &::before {
+        top: -6px;
+      }
+      &::after {
+        bottom: -6px;
+      }
     }
   }
   &-bottom{
@@ -89,12 +142,19 @@
     &-wrapper {
       display: none;
     }
+    &-info__btn {
+    margin-right: 10px;
+    }
+    &__burger {
+      display: inline-block;
+    }
   }
+
 }
 
 @media (max-width: 1024px) {
   .header-info {
-    & .fas,
+    & .fa-map-marker-alt,
     &__address {
     display: none;
     }
@@ -102,22 +162,61 @@
 }
 
 @media (max-width: 992px) {
-  .header-inner {
-    padding: 10px 0;
+  .header {
+    &-inner {
+      padding: 10px 0;
+    }
+    
   }
 }
 
+
 @media (max-width: 768px) {
-  
-  .header-info__phone {
-    display: none;
+  .header {
+    &-logo__img {
+      max-width: 55px;
+    }
+    &-info {
+      &__phone,
+      &__btn {
+        display: none;
+      }
+      &__call,
+      &__whatsapp {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 25px;
+      }
+      &__whatsapp {
+        font-size: 30px;
+      }
+    }
   }
 }
 
 @media (max-width: 576px) {
-  .header-logo__text {
-    margin-left: 10px;
-    font-size: 14px;
+  .header {
+    &-info {
+      &__btn {
+        display: none;
+      }
+      &__call {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+      &__whatsapp {
+        display: none;
+      }
+    }
+    &-logo {
+      &__text {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+      &__img {
+        max-width: 38px;
+      }
+    }
   }
 }
 

@@ -10,7 +10,7 @@
 }
 .services__item {
   width: 60%;
-  &:nth-child(2) {
+  &:nth-child(3) {
     width: 35%;
     position: relative;
   }
@@ -138,16 +138,20 @@
 @media (max-width: 768px) {
   .services {
     padding-bottom: 0;
+    &__inner {
+      display: block;
+    }
   }
   .services__item {
     width: 100%;
-    &:nth-child(2) {
+    &:nth-child(3) {
       display: none;
-      width: 60%;
+      width: 70%;
       margin: auto;
     }
     &-btn {
       display: block;
+      margin-bottom: 30px;
     }
   }
   .services__form {
@@ -163,6 +167,27 @@
     }
     &-btn {
       margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .services {
+    &__list {
+      margin-top: 25px;
+      margin-bottom: 40px;
+    }
+    &__form {
+      margin-top: 40px;
+    }
+    &__item {
+      &:nth-child(3) {
+        width: 90%;
+      }
+      &-btn {
+        max-width: 260px;
+        font-size: 14px;
+      }
     }
   }
 }
