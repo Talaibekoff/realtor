@@ -128,7 +128,7 @@ $(function() {
     ]
   });
 
-  var show = $('#moreDetails'); // Объявил переменную show
+  var show = $('#moreDetails');
   var details = $('.services__item:nth-child(3)');
   
   show.on('click', function () {
@@ -141,10 +141,9 @@ $(function() {
 
 
   readMore.on('click', function () {
-    after.css("position", "unset");
+    after.removeClass("read-more__content");
     fullText.css("display", "inline-block");
     readMore.css("display", "none");
-    
   });
 
 });
