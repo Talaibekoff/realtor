@@ -1,4 +1,5 @@
-$(document).ready(function () {
+$(function() {
+
   $('.features__inner').slick({
     infinite: false,
     slidesToShow: 3,
@@ -126,4 +127,24 @@ $(document).ready(function () {
       },
     ]
   });
+
+  var show = $('#moreDetails'); // Объявил переменную show
+  var details = $('.services__item:nth-child(3)');
+  
+  show.on('click', function () {
+    details.css("display", "block");
+  });
+  
+  var readMore = $('#readMore');
+  var fullText = $('#fullText');
+  var after = $('#after');
+
+
+  readMore.on('click', function () {
+    after.css("position", "unset");
+    fullText.css("display", "inline-block");
+    readMore.css("display", "none");
+    
+  });
+
 });

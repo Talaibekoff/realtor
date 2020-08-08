@@ -139,6 +139,21 @@
 
 @media (max-width: 1200px) {
   .header {
+    &-logo__img {
+      max-width: 75px;
+    }
+    &-inner {
+      padding: 10px 0;
+    }
+    &-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      background-color: $white;
+      box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.2);
+    }
     &-wrapper {
       display: none;
     }
@@ -164,9 +179,14 @@
 @media (max-width: 992px) {
   .header {
     &-inner {
-      padding: 10px 0;
+      padding: 5px 0;
     }
-    
+    &-logo__img {
+      max-width: 60px;
+    }
+    &-info__btn {
+      padding: 10px 20px;
+    }
   }
 }
 

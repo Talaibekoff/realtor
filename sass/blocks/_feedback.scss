@@ -54,6 +54,7 @@
   position: absolute;
   bottom: -120px;
   right: 0;
+  z-index: 0;
   max-width: 300px;
 }
 .feedback__arrows {
@@ -80,6 +81,11 @@
   .feedback__btn {
     margin-top: 20px;
     margin-bottom: 0;
+  }
+  .feedback__img {
+    bottom: -100px;
+    right: -100px;
+    max-width: 250px;
   }
 }
 @media (max-width: 576px) {

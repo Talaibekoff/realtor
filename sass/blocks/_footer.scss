@@ -109,3 +109,17 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .footer__nav {
+    column-count: unset;
+  }
+  .phone:first-child {
+    display: block;
+    padding-right: unset;
+    margin-bottom: 10px;
+    &::after {
+      display: none;
+    }
+  }
+}

@@ -10,6 +10,7 @@
 }
 .services__item {
   width: 60%;
+  transition: all .2s;
   &:nth-child(3) {
     width: 35%;
     position: relative;
@@ -34,6 +35,14 @@
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
+  background: $white;
+  transition: all .1s;
+  &:active {
+    transform: scale(.97);
+  }
+  &:focus {
+    outline: none;
+  }
 }
 .services__form {
   width: 100%;
@@ -188,6 +197,11 @@
         max-width: 260px;
         font-size: 14px;
       }
+    }
+    &__icon {
+      top: 15px;
+      left: 15px;
+      max-width: 100px;
     }
   }
 }
