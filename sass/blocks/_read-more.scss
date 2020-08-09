@@ -63,6 +63,7 @@
     border: none;
     border-bottom: 1px solid #000;
     background: $white;
+    cursor: pointer;
     transition: all .2s;
     &:active {
       transform: scale(0.97);

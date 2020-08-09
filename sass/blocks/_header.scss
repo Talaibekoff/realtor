@@ -60,21 +60,22 @@
   &__burger {
     display: none;
     width: 30px;
-    height: 18px;
-    position: relative;
-    vertical-align: middle;
-    &:active,
-    &:focus,
-    &:visited {
-      outline: none;
-      text-decoration: none;
-      color: transparent;
-    }
-    & span {
-      display: inline-block;
+    padding: 15px 0;
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1;
+
+    cursor: pointer;
+
+    &-item {
+      display: block;
       width: 100%;
       height: 2px;
+
       background-color: $black;
+
       position: absolute;
       top: 50%;
       left: 0;
@@ -83,7 +84,7 @@
       &::before,
       &::after {
         content: '';
-        display: inline-block;
+        display: block;
         width: 100%;
         height: 2px;
         position: absolute;
@@ -139,6 +140,9 @@
 
 @media (max-width: 1200px) {
   .header {
+    &-info {
+      margin-right: 35px;
+    }
     &-logo__img {
       max-width: 75px;
     }
@@ -161,7 +165,8 @@
     margin-right: 10px;
     }
     &__burger {
-      display: inline-block;
+      display: block;
+      top: 20px;
     }
   }
 
@@ -187,6 +192,9 @@
     &-info__btn {
       padding: 10px 20px;
     }
+    &__burger {
+      top: 10px;
+    }
   }
 }
 
@@ -197,6 +205,7 @@
       max-width: 55px;
     }
     &-info {
+      margin-right: 25px;
       &__phone,
       &__btn {
         display: none;
@@ -217,6 +226,7 @@
 @media (max-width: 576px) {
   .header {
     &-info {
+      margin-right: 35px;
       &__btn {
         display: none;
       }
@@ -236,6 +246,9 @@
       &__img {
         max-width: 38px;
       }
+    }
+    &__burger-item {
+      top: 30%;
     }
   }
 }
