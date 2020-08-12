@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +16,10 @@
       <div class="container">
          <div class="header-inner">
             <div class="header-logo">
-               <a href="#"><img class="header-logo__img" src="img/header-logo.png" alt=""></a>
-               <span class="header-logo__text">Казанский риэлтор</span>
+               <a href="#" class="header-logo__link">
+                  <img class="header-logo__img" src="img/header-logo.png" alt="">
+                  <span class="header-logo__text">Казанский риэлтор</span>
+               </a>
                <!-- /.header-logo__text -->
             </div>
             <!-- /.header-logo -->
@@ -32,7 +34,7 @@
                <a href="" target="_blank" class="header-info__btn btn">Написать в WhatsApp</a>
                <!-- /.header-info__btn -->
                <a href="#" class="header-info__whatsapp"><i class="fab fa-whatsapp"></i></a>
-               <button class="header__burger" type="button">
+               <button class="header__burger" type="button" id="burgerButton">
                   <span class="header__burger-item">Menu</span>
                </button>
             </div>
@@ -46,6 +48,16 @@
    <div class="header-bottom active">
       <div class="container">
          <div class="header-wrapper">
+            <div class="header-logo">
+               <a href="#" class="header-logo__link">
+                  <img class="header-logo__img" src="img/header-logo.png" alt="">
+                  <span class="header-logo__text">Казанский риэлтор</span>
+               </a>
+               <!-- /.header-logo__text -->
+            </div>
+            <button class="header__close">
+               <span class="header__close-item">Close</span>
+            </button>
             <nav class="header-nav">
                <a href="" class="header-nav__link">Клиентам</a>
                <!-- /.header-nav__link -->
@@ -61,6 +73,14 @@
                <!-- /.header-nav__link -->
             </nav>
             <!-- /.header-nav -->
+            <div class="header__information">
+               <a href="tel:89377787822" class="header__phone">+7 (937) 778-78-22</a>
+               <div class="header__address">
+                  <i class="fas header__address-icon fa-map-marker-alt"></i>
+                  <a href="#" class="header__address-link">Казань, пр. Хусаина Ямашева, 87А</a>
+               </div>
+               <a href="#" target="_blank" class="header__whatsapp btn">Написать в WhatsApp</a>
+            </div>
          </div>
          <!-- /.header-wrapper -->
       </div>

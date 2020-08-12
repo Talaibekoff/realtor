@@ -1,6 +1,9 @@
 body {
   margin: 0;
   font-family: 'Gotham Pro Regular', sans-serif;
+  &.active {
+    overflow: hidden;
+  }
 }
 
 * {

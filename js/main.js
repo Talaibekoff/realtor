@@ -1,5 +1,9 @@
 $(function() {
 
+  // Скрипт для вызова навигации по кнопке burger
+  var burgerButton = $('#burgerButton');
+  
+
   $('.features__inner').slick({
     infinite: false,
     slidesToShow: 3,
@@ -128,6 +132,9 @@ $(function() {
     ]
   });
 
+
+
+  // Кнопка для вызова блока .services__item-3
   var show = $('#moreDetails');
   var details = $('.services__item:nth-child(3)');
   
@@ -135,11 +142,12 @@ $(function() {
     details.css("display", "block");
   });
   
+  //Кнопка "Читать больше"
   var readMore = $('#readMore');
   var fullText = $('#fullText');
   var after = $('#after');
 
-
+  //Скрывается псевдоэлемент :after у блока "Читать больше"
   readMore.on('click', function () {
     after.removeClass("read-more__content");
     fullText.css("display", "inline-block");

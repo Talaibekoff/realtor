@@ -7,8 +7,16 @@
     align-items: center;
   }
   &-logo {
-    display: flex;
+    display: block;
     align-items: center;
+    &__link {
+      display: flex;
+      align-items: center;
+
+      color: $black;
+      @include bold;
+      text-decoration: none;
+    }
     &__text {
       margin-left: 20px;
 
@@ -73,13 +81,11 @@
     background: $white;
     border: none;
     cursor: pointer;
-
     &:focus,
     &:active {
       border: none;
       outline: none;
     }
-
     &-item {
       display: block;
       width: 100%;
@@ -117,8 +123,64 @@
       }
     }
   }
-  &-bottom{
+  &__close {
+    display: none;
+    width: 17px;
+    padding: 7px 0;
+
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    z-index: 1;
+
+    background: $white;
+    border: none;
+    cursor: pointer;
+    &:focus,
+    &:active {
+      border: none;
+      outline: none;
+    }
+    &-item {
+      display: block;
+      width: 100%;
+      height: 2px;
+
+      background: none;
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+
+      font-size: 0;
+      color: transparent;
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        background-color: $black;
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &-bottom {
     box-shadow: 3px 1px 8px rgba($black, .2);
+    & .header-logo {
+      display: none;
+    }
   }
   &-wrapper {
     display: flex;
@@ -156,6 +218,30 @@
       }
     }
   }
+  
+  &__information {
+    display: none;
+
+    text-align: center;
+  }
+  &__phone {
+    @include bold;
+    color: $black;
+    cursor: pointer;
+    &:visited {
+      color: inherit;
+    }
+  }
+  &__address {
+    margin: 15px 0;
+    &-link,
+    &-icon {
+      color: $main-color;
+    }
+  }
+  &__whatsapp {
+    padding: 10px 30px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -166,7 +252,7 @@
         margin-left: 5px;
       }
       &__btn {
-        margin-left: 10px;
+        margin: 10px 0;
       }
     }
     &-logo__img {
@@ -176,7 +262,7 @@
       padding: 10px 0;
     }
     &-top {
-      position: relative;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
@@ -189,19 +275,28 @@
     &-bottom {
       width: 100%;
       max-width: 450px;
+      padding-bottom: 50px;
 
       position: fixed;
       top: 0;
       right: 0;
-      bottom: 0;
       z-index: 1000;
 
       background: $white;
-      & .active {
+      transition: ease-in .4s;
+      transform: translateX(100%);
+      &.active {
         transform: translateX(0);
       }
       & .container {
         height: 100%;
+      }
+      & .header-logo {
+        display: block;
+        margin-top: 15px;
+        &__img {
+          max-width: 55px;
+        }
       }
     }
     &-wrapper {
@@ -210,40 +305,43 @@
       position: relative;
     }
     &-nav {
-      display: block;
-
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 50px 0;
       &__link {
         display: block;
-        margin: 15px 0;
-
+        margin-bottom: 13px;
+        
         border-bottom: 1px solid #000;
 
         text-align: center;
-        font-size: 20px;
+        font-size: 18px;
         @include bold;
+        &:after {
+          content: "";
+          display: none;
+        }
       }
-    }
-    &-info__btn {
-    margin-right: 10px;
     }
     &__burger {
       display: block;
-      top: 30px;
+      top: 35px;
+    }
+    &__close,
+    &__information {
+      display: block;
     }
   }
-
 }
 
 @media (max-width: 1024px) {
-  .header-info {
-    & .fa-map-marker-alt,
-    &__address {
-    display: none;
+  .header {
+    &-info {
+      & .fa-map-marker-alt,
+      &__address {
+      display: none;
+      }
     }
   }
 }
@@ -260,7 +358,10 @@
       padding: 10px 20px;
     }
     &__burger {
-      top: 20px;
+      top: 25px;
+    }
+    &-bottom {
+      max-width: 400px;
     }
   }
 }
@@ -288,6 +389,12 @@
         font-size: 30px;
       }
     }
+    &__burger {
+      top: 15px;
+    }
+    &-bottom {
+      max-width: 350px;
+    }
   }
 }
 
@@ -295,16 +402,14 @@
   .header {
     &-info {
       margin-right: 35px;
-      &__btn {
+      &__btn,
+      &__whatsapp {
         display: none;
       }
       &__call {
         margin-right: 10px;
         
         font-size: 20px;
-      }
-      &__whatsapp {
-        display: none;
       }
     }
     &-logo {
@@ -319,6 +424,17 @@
     }
     &__burger {
       top: 10px;
+    }
+    &-bottom {
+      max-width: 100%;
+      padding: unset;
+      
+      bottom: 0;
+
+      transform: translateY(-105%);
+      & .active {
+        transform: translateY(0);
+      }
     }
   }
 }
