@@ -32,17 +32,51 @@ h1, h2, h3, h4, h4, h5, h6 {
   text-align: center;
   transition: all .2s;
   cursor: pointer;
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     background-color: lighten($main-color, 5%);
+    outline: none;
+    border: none;
   }
 }
+
 .section {
   padding: 100px 0;
+  &__title {
+    font-size: 30px;
+    width: 100%;
+    max-width: 650px;
+  }
 }
-.section__title {
-  font-size: 30px;
-  width: 100%;
-  max-width: 650px;
+
+.arrows {
+  &-prev,
+  &-next {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    &:focus {
+      outline: none;
+      border: none;
+    }
+    &:active {
+      opacity: .5;
+    }
+  }
+}
+
+.slick-prev,
+.slick-next {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transform: scale(0.9);
+    outline: none;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -79,29 +113,3 @@ h1, h2, h3, h4, h4, h5, h6 {
   }
 }
 
-.arrows {
-  &-prev,
-  &-next {
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    font-size: 22px;
-    &:focus {
-      outline: none;
-      border: none;
-    }
-    &:active {
-      opacity: .5;
-    }
-  }
-}
-.slick-prev,
-.slick-next {
-  &:focus {
-    outline: none;
-  }
-  &:active {
-    transform: scale(0.9);
-    outline: none;
-  }
-}

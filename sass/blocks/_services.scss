@@ -77,6 +77,8 @@
   &-btn {
     width: 100%;
     max-width: 220px;
+    outline: none;
+    border: none;
   }
   &-policy {
     font-size: 13px;
@@ -203,6 +205,9 @@
       top: 15px;
       left: 15px;
       max-width: 100px;
+    }
+    &__link {
+      font-size: 12px;
     }
   }
 }

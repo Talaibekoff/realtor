@@ -2,19 +2,20 @@
   &-inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 0;
+
+    align-items: center;
   }
   &-logo {
     display: flex;
     align-items: center;
     &__text {
       margin-left: 20px;
+
       @include bold;
       font-size: 15px;
       text-transform: uppercase;
     }
-    
   }
   &-info {
     font-size: 15px;
@@ -43,6 +44,7 @@
     }
     &__call {
       display: none;
+
       font-size: 30px;
       vertical-align: middle;
       color: $main-color;
@@ -50,6 +52,7 @@
     &__whatsapp {
       display: none;
       font-size: 35px;
+
       vertical-align: middle;
       color: $main-color;
     }
@@ -60,14 +63,22 @@
   &__burger {
     display: none;
     width: 30px;
-    padding: 15px 0;
+    padding: 7px 0;
 
     position: absolute;
     top: 10px;
     right: 15px;
     z-index: 1;
 
+    background: $white;
+    border: none;
     cursor: pointer;
+
+    &:focus,
+    &:active {
+      border: none;
+      outline: none;
+    }
 
     &-item {
       display: block;
@@ -80,6 +91,10 @@
       top: 50%;
       left: 0;
       right: 0;
+
+      font-size: 0;
+      color: transparent;
+
       transform: translateY(-50%);
       &::before,
       &::after {
@@ -87,9 +102,11 @@
         display: block;
         width: 100%;
         height: 2px;
+
         position: absolute;
         left: 0;
         right: 0;
+
         background-color: inherit;
       }
       &::before {
@@ -116,6 +133,7 @@
       font-size: 15px;
       color: $black;
       text-decoration: none;
+
       position: relative;
       &::after {
         content: "";
@@ -123,8 +141,10 @@
         position: absolute;
         width: 0%;
         height: 2px;
+
         left: 0;
         bottom: -1;
+
         background-color: $main-color;
         transition: .4s;
       }
@@ -142,6 +162,12 @@
   .header {
     &-info {
       margin-right: 35px;
+      &__phone {
+        margin-left: 5px;
+      }
+      &__btn {
+        margin-left: 10px;
+      }
     }
     &-logo__img {
       max-width: 75px;
@@ -150,23 +176,64 @@
       padding: 10px 0;
     }
     &-top {
-      position: fixed;
+      position: relative;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 3;
+      z-index: 1000;
+
       background-color: $white;
       box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.2);
+      transform: rotate3d(0, 0, 0);
+    }
+    &-bottom {
+      width: 100%;
+      max-width: 450px;
+
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+
+      background: $white;
+      & .active {
+        transform: translateX(0);
+      }
+      & .container {
+        height: 100%;
+      }
     }
     &-wrapper {
-      display: none;
+      display: block;
+      height: 100%;
+      position: relative;
+    }
+    &-nav {
+      display: block;
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      &__link {
+        display: block;
+        margin: 15px 0;
+
+        border-bottom: 1px solid #000;
+
+        text-align: center;
+        font-size: 20px;
+        @include bold;
+      }
     }
     &-info__btn {
     margin-right: 10px;
     }
     &__burger {
       display: block;
-      top: 20px;
+      top: 30px;
     }
   }
 
@@ -193,7 +260,7 @@
       padding: 10px 20px;
     }
     &__burger {
-      top: 10px;
+      top: 20px;
     }
   }
 }
@@ -214,6 +281,7 @@
       &__whatsapp {
         display: inline-block;
         margin-right: 15px;
+
         font-size: 25px;
       }
       &__whatsapp {
@@ -232,6 +300,7 @@
       }
       &__call {
         margin-right: 10px;
+        
         font-size: 20px;
       }
       &__whatsapp {
@@ -241,14 +310,15 @@
     &-logo {
       &__text {
         margin-left: 10px;
+
         font-size: 12px;
       }
       &__img {
         max-width: 38px;
       }
     }
-    &__burger-item {
-      top: 30%;
+    &__burger {
+      top: 10px;
     }
   }
 }

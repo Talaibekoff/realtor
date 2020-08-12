@@ -33,12 +33,13 @@
 @media (max-width: 576px) {
   .hero {
     height: 290px;
+    background-position: 45%;
     &__title {
-      padding-top: 50px;
-      font-size: 22px;
+      padding: 60px 0 5px;
+      font-size: 18px;
     }
     &__subtitle {
-      font-size: 17px;
+      font-size: 13px;
     }
   }
 }
