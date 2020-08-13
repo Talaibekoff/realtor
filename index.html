@@ -12,7 +12,7 @@
 <body>
 
 <header class="header">
-   <div class="header-top">
+   <div class="header-top" id="headerTopNav">
       <div class="container">
          <div class="header-inner">
             <div class="header-logo">
@@ -45,31 +45,33 @@
       <!-- /.container -->
    </div>
    <!-- /.header-top -->
-   <div class="header-bottom active">
+   <div class="header-bottom" id="headerBottom">
       <div class="container">
          <div class="header-wrapper">
             <div class="header-logo">
-               <a href="#" class="header-logo__link">
+               <a href="#" data-scroll="header" class="header-logo__link">
                   <img class="header-logo__img" src="img/header-logo.png" alt="">
                   <span class="header-logo__text">Казанский риэлтор</span>
                </a>
                <!-- /.header-logo__text -->
             </div>
-            <button class="header__close">
+            <button class="header__close" id="closeButton">
                <span class="header__close-item">Close</span>
             </button>
             <nav class="header-nav">
-               <a href="" class="header-nav__link">Клиентам</a>
+               <a href="#" data-scroll="#features" class="header-nav__link">Агентам</a>
                <!-- /.header-nav__link -->
-               <a href="" class="header-nav__link">Агентам</a>
+               <a href="#" data-scroll="#services" class="header-nav__link">Клиентам</a>
                <!-- /.header-nav__link -->
-               <a href="" class="header-nav__link">В продаже</a>
+               <a href="#" data-scroll="#package" class="header-nav__link">Тарифы</a>
                <!-- /.header-nav__link -->
-               <a href="" class="header-nav__link">Отзывы</a>
+               <a href="#" data-scroll="#prorerty" class="header-nav__link">В продаже</a>
                <!-- /.header-nav__link -->
-               <a href="" class="header-nav__link">Партнеры</a>
+               <a href="#" data-scroll="#feedback" class="header-nav__link">Отзывы</a>
                <!-- /.header-nav__link -->
-               <a href="" class="header-nav__link">Контакты</a>
+               <a href="#" data-scroll="#partners" class="header-nav__link">Партнеры</a>
+               <!-- /.header-nav__link -->
+               <a href="#" data-scroll="#footer" class="header-nav__link">Контакты</a>
                <!-- /.header-nav__link -->
             </nav>
             <!-- /.header-nav -->
@@ -100,7 +102,7 @@
       <!-- /.container -->
    </div>
    <!-- /.hero -->
-   <section class="section features">
+   <section class="section features" id="features">
       <div class="container">
          <div class="features__inner">
             <div class="features__item">
@@ -144,7 +146,7 @@
       <!-- /.container -->
    </section>
    <!-- /.section features -->
-   <section class="section services">
+   <section class="section services" id="services">
       <div class="container services__block">
          <div class="services__inner">
             <div class="services__item">
@@ -223,7 +225,7 @@
       <!-- /.container -->
    </section>
    <!-- /.section services -->
-   <section class="section why">
+   <section class="section why" id="why">
       <div class="container">
          <h2 class="section__title why__title">Почему клиенты обращаются к нам снова
          и рекомендуют друзьям</h2>
@@ -270,7 +272,7 @@
       <!-- /.container -->
    </section>
    <!-- /.section why -->
-   <section class="section package">
+   <section class="section package" id="package">
       <div class="container">
          <h2 class="section__title package__title">Пакеты услуг по продаже недвижимости</h2>
          <!-- /.section__title package__title -->
@@ -355,7 +357,58 @@
       <!-- /.container -->
    </section>
    <!-- /.section package -->
-   <section class="section feedback">
+   <section class="section prorerty" id="prorerty">
+      <div class="container">
+         <div class="prorerty__inner">
+            <h2 class="section__title prorerty__title">Продажа недвижимости в Казани</h2>
+            <!-- /.section__title -->
+            <div class="prorerty__content">
+               <div class="prorerty__item">
+                  <a href="#" class="prorerty__item-link">
+                     <img src="img/prorerty/prorerty-1.jpg" alt="" class="prorerty__item-img">
+                     <h4 class="prorerty__item-title">Помещение в продажу, 2 000 м2</h4>
+                  </a>
+                  <p class="prorerty__item-text">Советский р-н. Космонавтов, 67</p>
+                  <span class="prorerty__item-price">20 000 - р.</span>
+               </div>
+               <!-- /.prorerty__item -->
+               <div class="prorerty__item">
+                  <a href="#" class="prorerty__item-link">
+                     <img src="img/prorerty/prorerty-2.jpg" alt="" class="prorerty__item-img">
+                     <h4 class="prorerty__item-title">1-к квартира, 42 м2, 6/36 этаж</h4>
+                  </a>
+                  <p class="prorerty__item-text">ОАЭ Дубаи, Азизи Ривьера</p>
+                  <span class="prorerty__item-price">10 038 000 - р.	</span>
+               </div>
+               <!-- /.prorerty__item -->
+               <div class="prorerty__item">
+                  <a href="#" class="prorerty__item-link">
+                     <img src="img/prorerty/prorerty-3.jpg" alt="" class="prorerty__item-img">
+                     <h4 class="prorerty__item-title">Помещение в продажу, 2 000 м2</h4>
+                  </a>
+                  <p class="prorerty__item-text">Советский р-н. Космонавтов, 67</p>
+                  <span class="prorerty__item-price">2 000 000 - р.</span>
+               </div>
+               <!-- /.prorerty__item -->
+               <div class="prorerty__item">
+                  <a href="#" class="prorerty__item-link">
+                     <img src="img/prorerty/prorerty-4.jpg" alt="" class="prorerty__item-img">
+                     <h4 class="prorerty__item-title">1-к квартира, 42 м2, 6/36 этаж</h4>
+                  </a>
+                  <p class="prorerty__item-text">ОАЭ Дубаи, Азизи Ривьера</p>
+                  <span class="prorerty__item-price">10 038 000 - р.	</span>
+               </div>
+               <!-- /.prorerty__item -->
+            </div>
+            <!-- /.prorerty__content -->
+            <a href="#" class="prorerty__button btn">Все объекты</a>
+         </div>
+         <!-- /.prorerty__inner -->
+      </div>
+      <!-- /.container -->
+   </section>
+   <!-- /.section prorerty -->
+   <section class="section feedback" id="feedback">
       <div class="container feedback__wrap">
          <h2 class="section__title">Отзывы наших клиентов</h2>
          <!-- /.section__title -->
@@ -437,8 +490,8 @@
          </div>
          <!-- /.feedback__inner -->
          <div class="arrows feedback__arrows">
-            <button type="button" class="feedback__arrows-prev"><i class="fas fa-chevron-left"></i></button>
-            <button type="button" class="feedback__arrows-next"><i class="fas fa-chevron-right"></i></button>
+            <button type="button" class="arrows-prev"><i class="fas fa-chevron-left"></i></button>
+            <button type="button" class="arrows-next"><i class="fas fa-chevron-right"></i></button>
          </div>
          <!-- /.arrows feedback__arrow -->
          <a href="#" class="feedback__btn btn">Оставить отзыв</a>
@@ -447,7 +500,7 @@
       <!-- /.container -->
    </section>
    <!-- /.section feedback -->
-   <section class="section partners">
+   <section class="section partners" id="partners">
       <div class="container partners__wrap">
          <h2 class="section__title">Партнеры</h2>
          <!-- /.section__title -->
@@ -491,15 +544,15 @@
             
          </div>
          <!-- /.partners__inner -->
-         <div class="arrows partners__arrows">
-            <button type="button" class="arrows-prev"><i class="fas fa-chevron-left"></i></button>
-            <button type="button" class="arrows-next"><i class="fas fa-chevron-right"></i></button>
+         <div class="arrows">
+            <button type="button" class="arrow-prev"><i class="fas fa-chevron-left"></i></button>
+            <button type="button" class="arrow-next"><i class="fas fa-chevron-right"></i></button>
          </div>
       </div>
       <!-- /.container -->
    </section>
    <!-- /.section partners -->
-   <section class="section read-more">
+   <section class="section read-more" id="read-more">
       <div class="container">
          <h2 class="section__title read-more__title">Риэлторские услуги в Казани</h2>
          <div class="read-more__block">
@@ -522,7 +575,7 @@
    <!-- /.section read-more -->
 </main>
 <!-- /.main -->
-<footer class="footer">
+<footer class="footer" id="footer">
    <div class="container">
       <div class="footer__inner">
          <div class="footer__item">

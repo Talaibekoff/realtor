@@ -1,25 +1,25 @@
 .partners {
   background-color: $section-bg;
 }
+
 .partners__wrap {
   position: relative;
 }
+
 .partners__inner {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   position: relative;
 }
+
 .partners__inner .slick-track {
   display: flex;
   align-items: center;
 }
+
 .partners__item {
   vertical-align: middle;
-}
-.partners__arrows {
-  position: absolute;
-  top: 0;
-  right: 0;
 }

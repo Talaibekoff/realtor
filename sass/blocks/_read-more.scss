@@ -1,75 +1,55 @@
-/* 
-.read-more__inner {
-  margin-top: 50px;
-  height: 150px;
-  overflow: hidden;
+.read-more__block {
+  margin-top: 30px;
+
+  font-size: 14px;
+  color: $secondary;
+}
+
+.read-more__content {
   position: relative;
-  transition: all .5s;
+
+  & p {
+    margin-bottom: 0;
+  }
+
   &:after {
     content: "";
+    display: block;
+    width: 100%;
+    height: 70%;
+
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
-    height: 200px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
-    transition: all .5s;
+    bottom: 0;
+
+    
+    background: linear-gradient(rgba(255, 255, 255, 0.4) 4%, rgba(255, 255, 255, 0.6) 43%, rgba(255, 255, 255, 0.7) 62%, rgba(255, 255, 255, 0.8) 70%);
   }
 }
-.read-more__btn, .read-more__inner {
-  display: inline-block;
-  margin-top: 25px;
-  &:hover {
-    height: 250px;
-    transition: all .5s;
-    &::after {
-      background: none;
-      transition: all .5s;
-    }
-  }
-} 
-*/
 
-.read-more {
-  &__block {
-    margin-top: 30px;
-    font-size: 14px;
-    color: $secondary;
+.read-more__full_text {
+  display: none;
+}
+
+.read-more__btn {
+  display: block;
+  margin-top: 20px;
+  padding: 0;
+
+  border: none;
+  border-bottom: 1px solid #000;
+  background: $white;
+
+  cursor: pointer;
+
+  transition: all .2s;
+
+  &:active {
+    transform: scale(0.97);
   }
-  &__content {
-    position: relative;
-    & p {
-      margin-bottom: 0;
-    }
-    &:after {
-      display: block;
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 70%;
-      background: linear-gradient(rgba(255, 255, 255, 0.4) 4%, rgba(255, 255, 255, 0.6) 43%, rgba(255, 255, 255, 0.7) 62%, rgba(255, 255, 255, 0.8) 70%);
-    }
-  }
-  &__full_text {
-    display: none;
-  }
-  &__btn {
-    display: block;
-    margin-top: 20px;
-    padding: 0;
-    border: none;
-    border-bottom: 1px solid #000;
-    background: $white;
-    cursor: pointer;
-    transition: all .2s;
-    &:active {
-      transform: scale(0.97);
-    }
-    &:focus {
-      outline: none;
-    }
+  
+  &:focus {
+    outline: none;
   }
 }

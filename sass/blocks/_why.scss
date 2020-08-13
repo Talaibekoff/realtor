@@ -1,85 +1,57 @@
 .why {
   background-color: $section-bg;
-  &__inner {
-    margin-top: 70px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    flex-wrap: wrap;
-    & .slick-prev {
-      position: absolute;
-      top: 40%;
-      left: -8px;
-      z-index: 1;
-      font-size: 0;
-      padding: 20px;
-      border-radius: 50%;
-      border: none;
-      box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.2);
-      background-color: $white;
-      &:before {
-        content: '';
-        display: block;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        top: 35%;
-        left: 40%;
-        border-top: 2px solid #000;
-        border-right: 2px solid #000;
-        transform: rotate(-135deg);
-      }
-    }
-    & .slick-next {
-      position: absolute;
-      top: 40%;
-      right: -8px;
-      z-index: 1;
-      font-size: 0;
-      padding: 20px;
-      border-radius: 50%;
-      border: none;
-      box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.2);
-      background-color: $white;
-      &:before {
-        content: '';
-        display: block;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        top: 35%;
-        left: 30%;
-        border-top: 2px solid #000;
-        border-right: 2px solid #000;
-        transform: rotate(42deg);
-      }
-    }
+}
+
+.why__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 70px;
+
+  text-align: center;
+
+  & .slick-prev {
+    left: -8px;
   }
-  &__item {
-    width: 20%;
-    min-height: 160px;
-    position: relative;
-  }
-  &__icon {
-    width: 55px;
-    height: 55px;
-    margin: 0 auto;
-  }
-  &__text {
-    padding: 10px 40px;
-    font-size: 15px;
-  }
-  &__link {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    color: $secondary;
-    &:visited {
-      color: $secondary;
-    }
+
+  & .slick-next {
+    right: -8px;
   }
 }
+
+.why__item {
+  width: 20%;
+  min-height: 160px;
+
+  position: relative;
+}
+
+.why__icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto;
+}
+
+.why__text {
+  padding: 10px 40px;
+
+  font-size: 15px;
+}
+
+.why__link {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  
+  color: $secondary;
+
+  &:visited {
+    color: $secondary;
+  }
+}
+
+/* Responsives */
 
 @media (max-width: 768px) {
   .why__inner {

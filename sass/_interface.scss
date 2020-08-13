@@ -1,6 +1,8 @@
 body {
   margin: 0;
+
   font-family: 'Gotham Pro Regular', sans-serif;
+
   &.active {
     overflow: hidden;
   }
@@ -33,8 +35,10 @@ h1, h2, h3, h4, h4, h5, h6 {
   font-size: 14px;
   text-decoration: none;
   text-align: center;
+
   transition: all .2s;
   cursor: pointer;
+
   &:hover,
   &:active,
   &:focus {
@@ -44,43 +48,106 @@ h1, h2, h3, h4, h4, h5, h6 {
   }
 }
 
+/* Section */
+
 .section {
   padding: 100px 0;
-  &__title {
-    font-size: 30px;
-    width: 100%;
-    max-width: 650px;
-  }
 }
 
-.arrows {
-  &-prev,
-  &-next {
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    font-size: 22px;
-    &:focus {
-      outline: none;
-      border: none;
-    }
-    &:active {
-      opacity: .5;
-    }
-  }
+.section__title {
+  width: 100%;
+  max-width: 650px;
+
+  font-size: 30px;
 }
+
+
+/* Slider buttons */
 
 .slick-prev,
 .slick-next {
+  padding: 20px;
+
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px 5px rgba($black, 0.1);
+  background-color: $white;
+
+  font-size: 0;
+  
   cursor: pointer;
+  transition: all .1s;
+
   &:focus {
     outline: none;
   }
+
   &:active {
     transform: scale(0.9);
     outline: none;
+  } 
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: url("../img/left-arrow.svg");
+  display: block;
+  width: 15px;
+
+  position: absolute;
+  top: 30%;
+  left: 30%;
+
+  color: $main-color;
+}
+
+.slick-next:before {
+  left: 35%;
+
+  transform: rotate(180deg);
+}
+
+.slick-disabled:before {
+  opacity: .5;
+}
+
+/* Slider arrows */
+
+.arrows {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.arrows .slick-disabled  {
+  color: rgba($black, .5)
+}
+
+.arrow-prev,
+.arrow-next,
+.arrows-prev,
+.arrows-next {
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+
+  &:active {
+    opacity: .5;
   }
 }
+
+
+/* Responsives */
 
 @media (max-width: 1200px) {
   .container {
@@ -88,6 +155,7 @@ h1, h2, h3, h4, h4, h5, h6 {
     max-width: 1140px;
   }
 }
+
 @media (max-width: 992px) {
   .container {
     width: 100%;
@@ -95,24 +163,32 @@ h1, h2, h3, h4, h4, h5, h6 {
   }
   .section {
     padding: 50px 0;
-    &__title {
-      font-size: 22px;
-    }
+  }
+
+  .section__title {
+    font-size: 22px;
   }
 }
+
 @media (max-width: 768px) {
   .container {
     width: 100%;
     max-width: 720px;
   }
+
   .section__title {
     font-size: 18px;
   }
 }
+
 @media (max-width: 576px) {
   .container {
     width: 100%;
     max-width: 540px;
+  }
+
+  .section__title {
+    font-size: 16px;
   }
 }
 

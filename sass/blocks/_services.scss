@@ -1,144 +1,186 @@
 .services {
   padding-top: 0;
   padding-bottom: 50px;
+
   position: relative;
   top: -50px;
 }
+
 .services__inner {
   display: flex;
   justify-content: space-between;
 }
+
 .services__item {
   width: 60%;
+
   transition: all .2s;
+
   &:nth-child(3) {
     width: 35%;
+
     position: relative;
   }
 }
+
 .services__list {
   margin-top: 50px;
   margin-bottom: 55px;
   padding-left: 25px;
+
   list-style-type: disc;
+
   font-size: 15px;
+
   &-item {
     margin: 10px 0;
   }
 }
+
 .services__item-btn {
   display: none;
+  max-width: 290px;
   padding: 10px 15px;
   margin: auto;
-  max-width: 290px;
+
   border: 1px solid;
   border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
   background: $white;
+
+  text-align: center;
+
+  cursor: pointer;
   transition: all .1s;
+
   &:active {
     transform: scale(.97);
   }
+
   &:focus {
     outline: none;
   }
 }
+
 .services__form {
   width: 100%;
   max-width: 720px;
   margin-top: -250px;
   padding: 50px;
+
   box-shadow: 0 3px 8px 1px rgba($black, 0.2);
-  &-block {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
+}
+
+.services__form-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.services__form-title {
+  display: block;
+  margin-bottom: 20px;
+
+  font-size: 20px;
+  @include bold;
+}
+
+.services__form-name {
+  max-width: 160px;
+  padding-bottom: 15px;
+
+  border: none;
+  border-bottom: 1px solid $black;
+
+  &::placeholder {
+    font-size: 15px;
+    color: $black;
   }
-  &-title {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 20px;
-    @include bold;
-  }
-  &-name {
-    max-width: 160px;
-    padding-bottom: 15px;
-    border: none;
-    border-bottom: 1px solid $black;
-    &::placeholder {
-      font-size: 15px;
-      color: $black;
-    }
-    &:focus {
-      outline: none;
-    }
-  }
-  &-btn {
-    width: 100%;
-    max-width: 220px;
+
+  &:focus {
     outline: none;
-    border: none;
-  }
-  &-policy {
-    font-size: 13px;
   }
 }
+
+.services__form-btn {
+  width: 100%;
+  max-width: 220px;
+
+  outline: none;
+  border: none;
+}
+
+.services__form-policy {
+  font-size: 13px;
+}
+
 .policy__link {
   color: $main-color;
 }
 
 .services__image {
   width: 100%;
+
   position: relative;
   z-index: 1;
 }
+
 .services__icon {
   position: absolute;
   top: 25px;
   left: 25px;
   z-index: 2;
 }
+
 .services__name {
   display: inline-block;
   margin-top: 25px;
   margin-bottom: 15px;
+
   font-size: 19px;
   @include bold;
 }
+
 .services__link {
   max-width: 455px;
+
   font-size: 13px;
   line-height: 22px;
   color: $main-color;
 }
+
 .fa-external-link-alt {
   margin-left: 5px;
 }
 
 
 
+/* Responsives */
+
 @media (max-width: 1200px) {
   .services__form {
     margin-top: -180px;
     max-width: 600px;
     padding: 30px;
-    &-name {
-      max-width: 130px;
-    }
-    &-btn {
-      max-width: 200px;
-    }
+  }
+
+  .services__form-name {
+    max-width: 130px;
+  }
+
+  .services__form-btn {
+    max-width: 200px;
   }
 }
 
 @media (max-width: 992px) {
   .services__item {
     width: 50%;
+
     &:nth-child(2) {
       width: 45%;
     }
   }
+
   .services__form {
     margin: 30px auto 0;
     max-width: 720px;
@@ -149,65 +191,74 @@
 @media (max-width: 768px) {
   .services {
     padding-bottom: 0;
-    &__inner {
-      display: block;
-    }
   }
+
+  .services__inner {
+    display: block;
+  }
+
   .services__item {
     width: 100%;
+
     &:nth-child(3) {
       display: none;
       width: 70%;
       margin: auto;
     }
-    &-btn {
-      display: block;
-      cursor: pointer;
-      margin-bottom: 30px;
-    }
   }
+
+  .services__item-btn {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+
   .services__form {
     padding: unset;
     box-shadow: unset;
-    &-block {
-      flex-wrap: wrap;
-    }
-    &-name {
-      width: 100%;
-      max-width: unset;
-      margin-bottom: 20px;
-    }
-    &-btn {
-      margin-top: 25px;
-    }
+  }
+
+  .services__form-block {
+    flex-wrap: wrap;
+  }
+
+  .services__form-name {
+    width: 100%;
+    max-width: unset;
+    margin-bottom: 20px;
+  }
+
+  .services__form-btn {
+    margin-top: 25px;
   }
 }
 
 @media (max-width: 576px) {
-  .services {
-    &__list {
-      margin-top: 25px;
-      margin-bottom: 40px;
-    }
-    &__form {
-      margin-top: 40px;
-    }
-    &__item {
-      &:nth-child(3) {
-        width: 90%;
-      }
-      &-btn {
-        max-width: 260px;
-        font-size: 14px;
-      }
-    }
-    &__icon {
-      top: 15px;
-      left: 15px;
-      max-width: 100px;
-    }
-    &__link {
-      font-size: 12px;
-    }
+  .services__list {
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
+
+  .services__form {
+    margin-top: 40px;
+  }
+
+  .services__item:nth-child(3) {
+    width: 90%;
+  }
+
+  .services__item-btn {
+    max-width: 260px;
+    font-size: 14px;
+  }
+
+  .services__icon {
+    top: 15px;
+    left: 15px;
+    max-width: 100px;
+  }
+
+  .services__link {
+    font-size: 12px;
   }
 }
