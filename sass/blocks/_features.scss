@@ -28,6 +28,7 @@
   padding: 54px 35px;
 
   position: relative;
+  z-index: 2;
 
   background-color: $white;
   overflow: hidden;
@@ -54,22 +55,29 @@
   
   position: absolute;
   bottom: 45px;
+  z-index: 1;
 }
 
 .features__bg {
   position: absolute;
   bottom: 25px;
   right: -100px;
+  z-index: 0;
 }
 
 .features__bg-second {
   bottom: 0;
   right: -50px;
+  z-index: 0;
 }
 
 .features__link {
   text-decoration: underline;
   color: $main-color;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .features__item-active {
@@ -95,6 +103,10 @@
 
   text-decoration: underline;
   color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   &:visited,
   &:focus,

@@ -90,6 +90,8 @@
     height: 1.5px;
 
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: 45%;
 
     background-color: $black;
@@ -111,6 +113,15 @@
   font-size: 14px;
   text-decoration: underline;
   color: $black;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 .package__info {

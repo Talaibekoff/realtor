@@ -37,7 +37,7 @@
 
 .prorerty__item {
   flex-basis: 23%;
-  margin: 10px;
+  margin: 0 10px;
   
   transition: all .2s;
   &:hover {
@@ -48,10 +48,15 @@
 .prorerty__item-link {
   text-decoration: none;
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   &:visited,
   &:active,
   &:focus {
     color: inherit;
+    outline: none;
   }
 }
 
@@ -77,6 +82,7 @@
   font-size: 17px;
   color: $main-color;
   @include bold;
+  text-decoration: none;
 }
 
 .prorerty__button {
@@ -104,6 +110,7 @@
 
   .prorerty__content {
     margin-top: 20px;
+    margin-bottom: 30px;
   }
 
   .prorerty__inner {

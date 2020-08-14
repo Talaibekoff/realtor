@@ -115,6 +115,10 @@
 
 .policy__link {
   color: $main-color;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .services__image {
@@ -146,6 +150,10 @@
   font-size: 13px;
   line-height: 22px;
   color: $main-color;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .fa-external-link-alt {
