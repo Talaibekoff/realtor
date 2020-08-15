@@ -81,8 +81,11 @@ $(function() {
   });
 
 
-  // Скрипты для слайдеров
 
+  // Маска для номера телефона
+  $('.user_phone').mask("0999 99-99-99");
+
+  // Скрипты для слайдеров
   $('.features__inner').slick({
     infinite: false,
     slidesToShow: 3,
@@ -244,3 +247,5 @@ $(function() {
   });
 
 });
+
+

@@ -1,18 +1,4 @@
 @font-face {
-font-family: 'Gotham Pro Light';
-src: url('../fonts/GothamPro-Light.eot');
-src: url('../fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
-url('../fonts/GothamPro-Light.woff') format('woff'),
-url('../fonts/GothamPro-Light.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
-}
-@mixin light {
-  font-family: 'Gotham Pro Light', sans-serif;
-  font-weight: 300;
-}
-
-@font-face {
 font-family: 'Gotham Pro Regular';
 src: url('../fonts/GothamPro.eot');
 src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
@@ -20,6 +6,7 @@ url('../fonts/GothamPro.woff') format('woff'),
 url('../fonts/GothamPro.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
+font-display: swap;
 }
 @mixin regular {
   font-family: 'Gotham Pro Regular', sans-serif;
@@ -34,6 +21,7 @@ url('../fonts/GothamPro-Bold.woff') format('woff'),
 url('../fonts/GothamPro-Bold.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
+font-display: swap;
 }
 @mixin bold {
   font-family: 'Gotham Pro Bold', sans-serif;

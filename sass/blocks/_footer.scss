@@ -156,25 +156,26 @@
 
 /* Responsives */
 
-@media (max-width: 768px) {
-  .footer__inner {
-    flex-wrap: wrap;
-  }
-
+@media (max-width: 992px) {
   .footer__item {
-    flex-basis: 100%;
-
-    text-align: center;
+    display: none;
   }
 
   .footer__block {
-    margin: 30px auto 0;
+    margin: auto;
 
     text-align: center;
   }
 
   .footer__address {
-    margin-top: 60px;
+    margin-top: 50px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .footer__inner {
+    flex-wrap: wrap;
   }
 
   .footer__address-link {

@@ -84,30 +84,44 @@
   @include bold;
 }
 
-.services__form-name {
+.services__form-input {
   max-width: 160px;
   padding-bottom: 15px;
 
   border: none;
   border-bottom: 1px solid $black;
 
+  transition: all .2s;
+
   &::placeholder {
     font-size: 15px;
     color: $black;
   }
 
-  &:focus {
+  &:focus,
+  &:hover {
+    padding-top: 10px;
+    padding-bottom: 3;
+
+    border-bottom: 3px solid $main-color;
     outline: none;
   }
+}
+
+.error_text {
+  color: $red
 }
 
 .services__form-btn {
   width: 100%;
   max-width: 220px;
+  max-height: 45px;
 
   outline: none;
   border: none;
 }
+
+
 
 .services__form-policy {
   font-size: 13px;
@@ -171,7 +185,7 @@
     padding: 30px;
   }
 
-  .services__form-name {
+  .services__form-input {
     max-width: 130px;
   }
 
@@ -230,7 +244,7 @@
     flex-wrap: wrap;
   }
 
-  .services__form-name {
+  .services__form-input {
     width: 100%;
     max-width: unset;
     margin-bottom: 20px;

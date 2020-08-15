@@ -6,6 +6,7 @@ body {
   &.active {
     overflow: hidden;
   }
+  font-display: fallback;
 }
 
 * {
